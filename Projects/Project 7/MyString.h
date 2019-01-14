@@ -12,11 +12,11 @@ class MyString{
     size_t length() const; //(6)
     const char * c_str() const; //(7)
     bool operator== (const MyString & other_myStr) const; //(8)
-    MyString & operator= (const MyString & ); //(9)
+    MyString & operator= (const MyString & other_myStr); //(9)
     MyString operator+ (const MyString & other_myStr) const; //(10)
     char & operator[] (size_t index); //(11a)
     const char & operator[] (size_t index) const; //(11b)
-    friend ostream& operator<<(ostream& os, const MyString& myStr); //(12)
+    friend std::ostream& operator<<(ostream& os, const MyString& myStr); //(12)
   private:
     void buffer_deallocate(); //(13)
     void buffer_allocate(size_t size); //(14)
