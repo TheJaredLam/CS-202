@@ -13,7 +13,7 @@ size_t myStringLength(const char * str)
 char * myStringCat(char * destination, const char * source)
 {
   unsigned int dest_len = myStringLength(destination);
-  unsigned int src_len =myStringLength(source);
+  unsigned int src_len = myStringLength(source);
   unsigned int j;
   for(j = 0; j < src_len; j++) {
     *(destination + dest_len + j) = *(source + j);
