@@ -23,7 +23,7 @@ Car *Agency::getm_inventory() {
 }
 
 void Agency::setm_name(char *newname) {
-  mySringCopy(m_name, newname);
+  myStringCopy(m_name, newname);
 }
 
 Car* Agency::operator[](int appoint) {
