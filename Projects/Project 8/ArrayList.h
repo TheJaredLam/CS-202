@@ -20,8 +20,8 @@ class ArrayList{
     DataType * insertBefore(const DataType & target,          //(10)
                             const DataType & value);
     DataType * erase(const DataType & target); //(11)
-   DataType & operator[] (size_t position); //(12a)
-    const DataType & operator[] (size_t position) const; //(12b)
+    DataType & operator[] (size_t position); //(12a)
+    /* const DataType & operator[] (size_t position) const; */ //(12b)
     size_t size() const; //(13)
     bool empty() const; //(14)
     void clear(); //(15)
