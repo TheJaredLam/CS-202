@@ -5,7 +5,7 @@
 using namespace std;
 
 class Node {
-  friend class NodeList;  //allows direcr accessing of link and data from class NodeList
+  friend class NodeList;  //allows direct accessing of link and data from class NodeList
   friend std::ostream & operator<<(std::ostream & os, const Node& node_src) {
     os << "The value of this data is: " << node_src.m_data << endl;
     return os;
