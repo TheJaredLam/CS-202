@@ -7,18 +7,18 @@ using namespace std;
 int main() {
   //Testing DataType Default Constructor
   DataType data;
-  cout << endl << "DataType Default c-tor is successsful!!!" << endl;
+  cout << endl << "DataType Default c-tor is successful!!!" << endl;
   cout << "Data's value is: " << data << endl;
 
   //Testing DataType Parameterized Constructor
   DataType secondData(3, 5.0);
-  cout << endl << "DataType Parameterized c-tor is successsful!!!" << endl;
+  cout << endl << "DataType Parameterized c-tor is successful!!!" << endl;
   //Testing overload operation <<
   cout << "Value of secondData: " << secondData << endl;
 
   //Testing DataType Copy Constructor
   DataType cpyData(secondData);
-  cout << endl << "DataType Copy c-tor is successsful!!!" << endl;
+  cout << endl << "DataType Copy c-tor is successful!!!" << endl;
   cout << "Value of cpyData: " << cpyData << endl;
 
   //Testing DataType operator==
@@ -54,17 +54,17 @@ int main() {
   cout << endl << "Test Node Class and implementation of Nodes are working!" << endl;
 
   Node node;
-  cout << endl << "Default node Constructor successsful!!!" << endl;
+  cout << endl << "Default node Constructor successful!!!" << endl;
   cout << "Node's value is: " << node << endl;
 
   cout << endl << "Testing Parameterized node c-tor" << endl;
   Node secondNode(cpyData);
-  cout << "Node Parameterized is successsful!!!" << endl;
+  cout << "Node Parameterized is successful!!!" << endl;
   cout << "Node's secondNode value are: " << secondNode << endl;
 
   cout << endl << "Testing Copy c-tor works?" << endl;
   Node cpyNode(secondNode);
-  cout << "Node Copy c-tor is successsful!!!" << endl;
+  cout << "Node Copy c-tor is successful!!!" << endl;
   cout << "Node's cpyNode value are: " << cpyNode << endl;
 
   //Evoke the operator<< for the data of const and non-Constructor
@@ -82,19 +82,19 @@ int main() {
   //Parameterized Constructor
   cout << endl << "Test NodeList Parameterized c-tor" << endl;
   NodeList otherAgenda(40, cpyData);
-  cout << "NodeList Parameterized c-tor is successsful!!!" << endl;
+  cout << "NodeList Parameterized c-tor is successful!!!" << endl;
   cout << "NodeList's otherAgenda value are: " << otherAgenda << endl;
 
   cout << endl << "Test NodeList Copy Constructor" << endl;
   NodeList cpyAgenda(otherAgenda);
-  cout << "NodeList Copy c-tor is successsful!!!" << endl;
+  cout << "NodeList Copy c-tor is successful!!!" << endl;
   cout << "NodeList's cpyAgenda value are: " << cpyAgenda << endl;
 
   //Assignment operator
   cout << endl << "Test NodeList Assignement operator" << endl;
   NodeList assignAgenda(4, cpyData);
   assignAgenda = otherAgenda;
-  cout << "NodeList Assignment operator is successsful!!!" << endl;
+  cout << "NodeList Assignment operator is successful!!!" << endl;
   cout << "NodeList's assignAgenda value are: " << assignAgenda << endl;
 
   cout << endl << "Front Node test" << endl;
@@ -174,7 +174,7 @@ int main() {
     {
       originalAgenda.clear();
       if(originalAgenda.empty()) {
-        cout << "It is successsful and the list is empty." << endl;
+        cout << "It is successful and the list is empty." << endl;
       }
       else {
         cout << "Not working, there is a list look very extra careful" << endl;
@@ -195,17 +195,17 @@ int main() {
 
     cout << endl << "Test ArrayList Parameterized c-tor" << endl;
     ArrayList watchList(10, uses);
-    cout << "Parameterized constructor is successs!!!" << endl;
+    cout << "Parameterized constructor is success!!!" << endl;
     cout << "The default value is: " << watchList << endl;
 
     cout << endl << "Test for ArrayList Copy Constructor" << endl;
     ArrayList cpyAgendaArray(watchList);
-    cout << "Copy Constructor is successsful!!!" << endl;
+    cout << "Copy Constructor is successful!!!" << endl;
     cout << "A value of cpyAgendaArray: " << cpyAgendaArray << endl;
 
     cout << endl << "Test for ArrayList Assignement" << endl;
     cpyAgendaArray = watchList;
-    cout << "Assignment operator is a successs" << endl;
+    cout << "Assignment operator is a success" << endl;
     cout << "The new cpyAgendaArray of its value: " << cpyAgendaArray << endl;
 
     cout << endl << "Test for ArrayList front()" << endl;
@@ -229,8 +229,27 @@ int main() {
     else {
       cout << endl << "Match hasn't been found at all!!!" << endl;
     }
-    
-    cout << endl << "Test for NodeList's size()" << endl;
-    int length = list -> size();
-    cout << " assignAgenda's length is: " << length << endl;
+    DataType weirdType(960, 480);
+    DataType mark(5, 2.0);
+    ArrayList * supplies = new ArrayList(5, mark);
+    DataType * location = supplies -> insertAfter(mark, weirdType);
+
+    cout << "The value of location is: " << *location << endl;
+    cout << "The most before of value is: " << endl;
+    if(!before) {
+      cout << "NULL" << endl;
+    }
+    else {
+      cout << *before << endl;
+    }
+
+    cout << endl << "Test for ArrayList Size()" << endl;
+    cout << "secondAgenda's size of ArrayList is: " << secondAgenda.size() << endl;
+
+    cout << endl << "Test for ArrayList insertBefore()" << endl;
+    DataType FrontTest(0, 0.0);
+    secondAgenda.insertBefore(FrontTest, weirdType);
+    cout << "The secondAgenda is: " << secondAgenda << endl;
+    cout << "The insertion before is a successful" << endl;
+    return 0;
 }
