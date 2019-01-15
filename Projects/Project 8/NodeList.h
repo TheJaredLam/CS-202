@@ -41,7 +41,7 @@ class Node {
 };
 
  class NodeList{
-    friend srd::ostream & operator<<(std::ostream & os,     //(i)
+    friend std::ostream & operator<<(std::ostream & os,     //(i)
                                      const NodeList & nodeList);
     public:
       NodeList();                                               //(1)
