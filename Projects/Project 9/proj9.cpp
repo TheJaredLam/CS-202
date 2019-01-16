@@ -10,18 +10,18 @@ using namespace std;
 int main() {
   //Testing default constructor of DataType
   DataType testing;
-  cout << endl << "DataType Default c-tor is successful!!!" << endl;
+  cout << "DataType Default c-tor is successful!!!" << endl;
   cout << "The value of testing is: " << testing << endl;
 
   //DataType Parameterized C-tor
   DataType testing2(4, 12.0);
-  cout << endl << "DataType Parameterized Construction is running!" << endl;
+  cout << "DataType Parameterized Construction is running!" << endl;
   //Making sure the overload operator is working
   cout << "Value of testing2 is: " << testing2 << endl;
 
   //Copy constructor of DataType
   DataType cpyData(testing2);
-  cout << endl << "DataType Copy Construction is running!" << endl;
+  cout << "DataType Copy Construction is running!" << endl;
   cout << "The cpyData's value is: " << cpyData << endl;
 
   //DataType operator=
@@ -94,7 +94,7 @@ int main() {
   cout << "The Copy Constructor of NodeQueue is running smoothly." << endl;
   cout << "The quest2 of the value is: " << cpyQuest << endl;
 
-  cout << "Is the function of NodeQueue Copy Constructor working?" << endl;
+  cout << "Is the function of NodeQueue Assignment Operator working?" << endl;
   NodeQueue request(4, cpyData);
   request = quest2;
   cout << "The Assignment Operator of NodeQueue is running smoothly." << endl;
@@ -244,5 +244,5 @@ int main() {
   cout << "------------------------" << endl;
   cout << "Yeah you have finish you requirement for this projects!!!" << endl;
   return 0;
-  
+
 }
