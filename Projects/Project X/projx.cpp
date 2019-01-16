@@ -21,7 +21,7 @@ int main() {
   sp2->setDoubleVal(0.5);
   cout << "Deference Smart Pointer 1: " << *sp1 << endl;
   cout << "Deference Smart Pointer 2: " << *sp2 << endl;
-  cout << endl << "testing SmartPtr Assignment operator" << endl;
+  cout << endl << "Testing SmartPtr Assignment operator" << endl;
 
   SmartPtr sp3;
 
@@ -34,7 +34,7 @@ int main() {
   cout << "Deference Smart Pointer 2: " << *sp2 << endl;
   cout << "Deference Smart Pointer 3: " << *sp3 << endl;
 
-  cout << endl << "Testing SmartPtr Parmeterized ctor with NULLdata" << endl;
+  cout << endl << "Testing SmartPtr Parameterized ctor with NULLdata" << endl;
 
   SmartPtr spNULL( NULL );
 
