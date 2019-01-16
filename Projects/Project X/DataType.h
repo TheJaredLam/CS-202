@@ -3,8 +3,8 @@
 #include <iostream>
 
 class DataType {
-  friend std::ostream & operator<<(std::ostream& os, const DataType& dataType);
-  friend std::ostream & operator>>(std::ostream& is, DataType& dataType);
+  friend std::ostream & operator<<(std::ostream& os, const DataType& dt);
+  friend std::ostream & operator>>(std::ostream& is, DataType& dt);
 
   public:
     DataType();
@@ -20,4 +20,4 @@ class DataType {
     int m_intVal;
     double m_doubleVal;
 };
-#endif 
+#endif
