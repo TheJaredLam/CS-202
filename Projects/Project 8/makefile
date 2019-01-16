@@ -4,7 +4,7 @@ HEADERS = DataType.h ArrayList.h NodeList.h
 #List of all header files
 SRCS = proj8.cpp DataType.cpp ArrayList.cpp NodeList.cpp
 #List of all source files
-OBJECTS := $(patdubst %.cpp,%.o,$(SRCS))
+OBJECTS := $(patsubst %.cpp,%.o,$(SRCS))
 #Creates a list of object files (.o) for every entry under SRCS (source files)
 CXX = g++ #compiler command to be used
 CXX_FLAGS = -g -Wall -std=c++11 #comilation flags to be used (here std=c++11 is just for reference, not necessary)
