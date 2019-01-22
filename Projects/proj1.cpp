@@ -7,11 +7,11 @@ using namespace std;
 
 const int NUMBER_OF_NAMES = 10;
 const int SIZE_NAME = 20;
-void myStrincgCopy(char destination [], const char source []);
+void myStringCopy(char destination [], const char source []);
 int myStringLength(const char str[]);
 int myStringCompare(const char str1[], const char str2[]);
 void swap(char tempa[SIZE_NAME], char tempb[SIZE_NAME]);
-void readf(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
+void readf(char file[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void printn(char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void sortletters(char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void writef(char file[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
@@ -57,7 +57,7 @@ int main()
   return 0;
 }
 
-void myStrincgCopy(char destination [], const char source [])
+void myStringCopy(char destination [], const char source [])
 {
   int name = 0;
   while(source[name] != '\0')
@@ -88,9 +88,9 @@ int myStringCompare(const char str1[], const char str2[])
 void swap(char tempa[SIZE_NAME], char tempb[SIZE_NAME])
 {
   char temp[SIZE_NAME];
-  myStrincgCopy(temp, str1);
-  myStrincgCopy(str1, str2);
-  myStrincgCopy(str2, temp);
+  myStringCopy(temp, str1);
+  myStringCopy(str1, str2);
+  myStringCopy(str2, temp);
 }
 
 void readf(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME])
@@ -101,7 +101,7 @@ void readf(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME])
     for(int n = 0; n < NUMBER_OF_NAMES && !file.eof(); n++) {
       names[n][0] = '0' + n;
       names[n][1] = ' ';
-      gile.getline(&names[n][2], SIZE_NAME - 3);
+      file.getline(&names[n][2], SIZE_NAME - 3);
     }
     file.close();
   }
@@ -120,7 +120,7 @@ void sortletters(char names[NUMBER_OF_NAMES][SIZE_NAME])
   do {
     swapped = false;
     for(int n = 0; n < NUMBER_OF_NAMES - 1; n++) {
-      if(myStringLength(names[n]) > myStringLength(names[n + 1]) {
+      if(myStringCompare(&names[n][2], &names[n + 1][2]) > 0) {
         swap(names[n], names[n + 1]);
         swapped = true;
       }
@@ -128,7 +128,7 @@ void sortletters(char names[NUMBER_OF_NAMES][SIZE_NAME])
   } while(swapped);
 }
 
-void writef(char file[], char names[NUMBER_OF_NAMES][SIZE_NAME])
+void writef(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME])
 {
   ofstream file;
   file.open(filename);
@@ -144,7 +144,7 @@ void sortsize(char names[NUMBER_OF_NAMES][SIZE_NAME])
   do {
     swapped = false;
     for(int n = 0; n < NUMBER_OF_NAMES - 1; n++) {
-      if(myStringLength(names[n]) > myStringLength(names[n + 1]) {
+      if(myStringLength(names[n]) > myStringLength(names[n + 1])) {
         swap(names[n], names[n + 1]);
         swapped = true;
       }
