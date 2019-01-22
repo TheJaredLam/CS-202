@@ -11,10 +11,10 @@ void myStringCopy(char destination [], const char source []);
 int myStringLength(const char str[]);
 int myStringCompare(const char str1[], const char str2[]);
 void swap(char tempa[SIZE_NAME], char tempb[SIZE_NAME]);
-void readf(char file[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
+void readf(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void printn(char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void sortletters(char names[NUMBER_OF_NAMES][SIZE_NAME]);
-void writef(char file[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
+void writef(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void sortsize(char names[NUMBER_OF_NAMES][SIZE_NAME]);
 
 int main()
