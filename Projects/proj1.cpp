@@ -79,8 +79,8 @@ int myStringCompare(const char str1[], const char str2[])
 {
   int size = max(myStringLength(str1), myStringLength(str2));
   for(int index = 0; index < size; index++) {
-    if(str1[index < str2[index]]) return -1;
-    if(str2[index < str1[index]]) return 1;
+    if(str1[index] < str2[index]) return -1;
+    if(str2[index] < str1[index]) return 1;
   }
   return 0;
 }
