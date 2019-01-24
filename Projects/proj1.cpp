@@ -1,5 +1,4 @@
 // Project 1 by Jared Lam for CS 202
-
 #include <iostream>
 #include <fstream>
 
@@ -8,9 +7,9 @@ using namespace std;
 const int NUMBER_OF_NAMES = 10;
 const int SIZE_NAME = 20;
 void myStringCopy(char destination [], const char source []);
-int myStringLength(const char str[]);
-int myStringCompare(const char str1[], const char str2[]);
-void swap(char tempa[SIZE_NAME], char tempb[SIZE_NAME]);
+int myStringLength(const char str []);
+int myStringCompare(const char str1 [], const char str2 []);
+void swap(char str1[SIZE_NAME], char str2[SIZE_NAME]);
 void readf(char filename[], char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void printn(char names[NUMBER_OF_NAMES][SIZE_NAME]);
 void sortletters(char names[NUMBER_OF_NAMES][SIZE_NAME]);
@@ -52,7 +51,7 @@ int main()
   cout << "=========================="<< endl;
   sortletters(namesa);
   printn(namesa);
-  wirtef(outputf2, namesa);
+  writef(outputf2, namesa);
 
   return 0;
 }
@@ -68,14 +67,14 @@ void myStringCopy(char destination [], const char source [])
   destination[name] = '\0';
 }
 
-int myStringLength(const char str[])
+int myStringLength(const char str [])
 {
   int size = 0;
   for(; str[size] != '\0'; size++);
   return size;
 }
 
-int myStringCompare(const char str1[], const char str2[])
+int myStringCompare(const char str1 [], const char str2 [])
 {
   int size = max(myStringLength(str1), myStringLength(str2));
   for(int index = 0; index < size; index++) {
@@ -85,7 +84,7 @@ int myStringCompare(const char str1[], const char str2[])
   return 0;
 }
 
-void swap(char tempa[SIZE_NAME], char tempb[SIZE_NAME])
+void swap(char str1[SIZE_NAME], char str2[SIZE_NAME])
 {
   char temp[SIZE_NAME];
   myStringCopy(temp, str1);
