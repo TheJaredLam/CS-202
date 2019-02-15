@@ -28,7 +28,7 @@ int main() {
          agency.readAllData(inputf);
          break;
       case 2:
-         agency.printAlllDatq();
+         agency.printAlllData();
          break;
       case 3:
       {

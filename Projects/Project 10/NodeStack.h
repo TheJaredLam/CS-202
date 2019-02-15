@@ -19,6 +19,7 @@ class Node {
   }
 
   public:
+
     Node() : m_next( NULL ){}
     Node(const T& data, Node<T>* next = NULL) :
        m_next( next ),
